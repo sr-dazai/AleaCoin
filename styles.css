@@ -1,0 +1,159 @@
+.flip-animation {
+  animation-name: flip;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg); /* Sem rotação no início */
+  }
+  50% {
+    transform: rotateX(360deg) rotateY(360deg); /* Rotação durante a metade da animação */
+  }
+  100% {
+    transform: rotateX(720deg) rotateY(720deg); /* Rotação completa no final */
+  }
+}
+
+.fade-in {
+  animation-name: fade;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0; /* Começa com opacidade 0 (invisível) */
+  }
+  100% {
+    opacity: 1; /* Atinge opacidade 1 (totalmente visível) */
+  }
+}
+
+/* Estilos para a tela de boas-vindas */
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #202b33; /* Fundo escuro com tom azulado */
+  color: #fff;
+  z-index: 9999; /* Certifica-se de que está acima de outros elementos */
+}
+
+.welcome-content {
+  text-align: center;
+}
+
+.welcome-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.welcome-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.welcome-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50; /* Verde */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-content button:hover {
+  background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Definindo o tema escuro meia-noite como padrão */
+    color: #fff; /* Definindo a cor do texto para branco */
+    transition: background-color 0.5s ease; /* Adicionando transição suave para a troca de cor de fundo */
+  }
+  
+  .container {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .coin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .coin {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/6042/6042380.png'); /* Adicionando a imagem da moeda */
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .coin:hover {
+    transform: scale(1.05);
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent; /* Botão sem cor de fundo */
+    color: #fff; /* Cor do ícone */
+    border: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centralizando horizontalmente */
+  }
+  
+  .dark-theme button {
+    color: #fff; /* Alterando a cor do ícone no tema escuro */
+  }
+  
+  /* Estilo para o tema escuro com tons azulados */
+  .dark-theme body {
+    background-color: #202b33;
+  }
+
+  .light-theme {
+    background-color: #f0f0f0; /* Fundo claro */
+    color: #333; /* Texto escuro */
+  }
+  
+  .light-theme button {
+    color: #333; /* Cor do ícone no tema claro */
+  }S  
+
+  #credits {
+    position: absolute;
+    bottom: 10px; /* Distância do fundo */
+    right: 10px; /* Distância da direita */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+  }
+
+  .welcome-content .welcome-coin {
+    width: 200px; /* Tamanho da moeda */
+    height: auto;
+    margin-bottom: 20px; /* Espaço abaixo da moeda */
+    opacity: 0; /* Inicia invisível */
+    transition: opacity 1s ease-in-out; /* Transição suave de 1 segundo */
+  }
+  
